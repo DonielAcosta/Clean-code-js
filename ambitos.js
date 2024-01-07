@@ -5,7 +5,7 @@ function greet() {
 }
 greet(); //> Hello world
 
-//> Ámbito local o de función
+// Ámbito local o de función
 function greet() {
   let greeting = "Hello World";
   console.log(greeting);
@@ -13,16 +13,16 @@ function greet() {
 greet(); //> Hello world
 console.log(greeting); //> Variable no definida
 
-//> Ámbito de bloque
+// Ámbito de bloque
 {
-  let greeting = "Hello World";
-  var lang = "English";
+  let greeting = "Hello World ambito de bloque ";
+  var lang = "English bloque";
   console.log(greeting);
 }
 console.log(lang); //> English
 console.log(greeting); //> Uncaught ReferenceError: greeting is not defined
 
-//> Ámbito estático o dinámico
+// Ámbito estático o dinámico
 const age = 28;
 function printAge() {
   console.log(age);

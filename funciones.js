@@ -1,14 +1,14 @@
-//> Declaración
+// Declaración
 function getResult() {
   return "Results";
 }
-getResult(); //> Results
+getResult(); // Results
 
-//> Expresión
+// Expresión
 const getResult = function () {
   return "Results";
 };
-getResult(); //> Results
+getResult(); // Results
 
 // Number es el parámetro de la función
 function getDouble(number) {
@@ -18,37 +18,37 @@ function getDouble(number) {
 // 10 es el argumento de la función
 getDobule(10);
 
-//> Parámetros por defecto
+// Parámetros por defecto
 function greet(person = "strange") {
   console.log("Hello " + person);
 }
 
-greet(); //> Sin parámetro. Hello strange
-greet("Alex"); //> Hello Alex
+greet(); // Sin parámetro. Hello strange
+greet("Doniel"); // Hello Doniel
 
-//> Parámetro rest y operador spread
-// Sin rest
+// Parámetro rest y operador spread
+// Sin rest 
 function add(x, y) {
   return x + y;
 }
 
-add(1, 2, 3, 4, 5); //> 3
+add(1, 2, 3, 4, 5); // 3
 
 // Con rest
 function add(...args) {
   return args.reduce((previous, current) => previous + current, 0);
 }
 
-add(1, 2, 3, 4, 5); //> 15
+add(1, 2, 3, 4, 5); // 15
 
-//> El parámetro rest debe de ser el último
+// El parámetro rest debe de ser el último
 function example(x, y, ...args) {
   console.log(args);
 }
 
-example(1, 2, 3, 4, 5); //> [3, 4, 5]
+example(1, 2, 3, 4, 5); // [3, 4, 5]
 
-//> Spread también nos permite clonar objetos y arrays de una forma muy simple y expresiva
+// Spread también nos permite clonar objetos y arrays de una forma muy simple y expresiva
 // OBJETO
 const course = {
   title: "JavaScript Definitivo",
@@ -67,12 +67,12 @@ const numbersCloned = myArray.slice();
 // Clonado con el spread operator
 const numbersCloned = [...myArray];
 
-//> También podemos usar el operador spread para concatenar arrays:
+// También podemos usar el operador spread para concatenar arrays:
 const numbersA = [1, 2, 3];
 const numbersB = [4, 5, 6];
 
 // Con concat
-const newArray = numbersA.concat(numbersB); //> [1, 2, 3, 4, 5, 6]
+const newArray = numbersA.concat(numbersB); // [1, 2, 3, 4, 5, 6]
 
 // Con spread
-const newArray = [...numbersA, ...numbersB]; //> [1, 2, 3, 4, 5, 6]
+const newArray = [...numbersA, ...numbersB]; // [1, 2, 3, 4, 5, 6]
